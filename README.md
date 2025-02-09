@@ -39,6 +39,7 @@ This is a **Spring Boot REST API** for an **E-Commerce Website**, supporting **r
 | **PUT** | `/api/v1/product/{id}/discount` | Apply a discount to a product |
 | **GET** | `/api/v1/product/products?name=&category=` | Search products by name & category |
 | **GET** | `/api/v1/product/{id}` | Get a product by ID |
+| **DELETE** | `/api/v1/product/{id}` | Delete a product by ID |
 
 
 
