@@ -41,5 +41,12 @@ This is a **Spring Boot REST API** for an **E-Commerce Website**, supporting **r
 | **GET** | `/api/v1/product/{id}` | Get a product by ID |
 | **DELETE** | `/api/v1/product/{id}` | Delete a product by ID |
 
+## 🛠️ Postman Collection
+
+| Tool | Link |
+|------|------|
+| **Postman Collection** | 📥 [Download Here]([https://your-link.com/postman.json](https://bakend-7437.postman.co/workspace/Team-Workspace~15e5d60c-2f3e-4a43-8561-0c991b0f1c8f/collection/41955790-de5f0aa5-efa8-4d44-95f9-58b26f022f03?action=share&creator=41955790)) |
+
+
 
 
