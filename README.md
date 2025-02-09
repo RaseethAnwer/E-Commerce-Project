@@ -1,4 +1,3 @@
-# E-Commerce-Project
 # 🛒 E-Commerce Website API
 
 This is a **Spring Boot REST API** for an **E-Commerce Website**, supporting **role-based authentication, product management, and discount handling**.  
@@ -7,22 +6,24 @@ This is a **Spring Boot REST API** for an **E-Commerce Website**, supporting **r
 
 ## 🚀 Features
 
-✅ **User Authentication** (Signup & Login)  
-✅ **Role-Based Access Control** (Admin, Staff, Buyer, Vendor)  
-✅ **Product Management** (Create, Update, Retrieve, Delete)  
-✅ **Discount Management**  
-✅ **Secure API with JWT Authentication**  
-✅ **MySQL Database Integration**  
+| Feature | Description |
+|---------|-------------|
+| **User Authentication** | Signup & Login with JWT Security |
+| **Role-Based Access** | Admin, Staff, Buyer, Vendor |
+| **Product Management** | Add, update, view, and search products |
+| **Discount Management** | Apply discounts on products |
+| **Secure API** | JWT Authentication for protected routes |
+| **Database** | MySQL Integration |
 
 ---
 
 ## 🏗️ Tech Stack
 
-- **Backend:** Java, Spring Boot, Spring Security  
-- **Database:** MySQL  
-- **Authentication:** JWT (JSON Web Tokens)  
-- **API Documentation:** Postman Collection  
-
-
-![image](https://github.com/user-attachments/assets/3a97f41a-7660-499d-9b07-3eab57eff885)
-
+| Technology | Usage |
+|------------|-------|
+| **Java** | Backend API |
+| **Spring Boot** | Framework for REST APIs |
+| **Spring Security** | Authentication & Authorization |
+| **MySQL** | Database |
+| **JWT** | Secure Token-based Authentication |
+| **Postman** | API Testing |
