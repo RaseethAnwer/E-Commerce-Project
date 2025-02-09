@@ -44,6 +44,6 @@ This is a **Spring Boot REST API** for an **E-Commerce Website**, supporting **r
 
 | Tool | Link |
 |------|------|
-| **Postman Collection** | 📥 [Download Here]([https://your-link.com/postman.json](https://app.getpostman.com/join-team?invite_code=0cb902afbb9fb7257db6979f5aebf1bce0ffa1c04079e66939a64e6b3ca3c4d4)) |
+| **Postman Collection** | 📥 [Download Here](https://app.getpostman.com/join-team?invite_code=0cb902afbb9fb7257db6979f5aebf1bce0ffa1c04079e66939a64e6b3ca3c4d4) |
 
 
