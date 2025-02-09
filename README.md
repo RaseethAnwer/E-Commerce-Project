@@ -40,3 +40,10 @@ This is a **Spring Boot REST API** for an **E-Commerce Website**, supporting **r
 | **GET** | `/api/v1/product/products?name=&category=` | Search products by name & category |
 | **GET** | `/api/v1/product/{id}` | Get a product by ID |
 
+## 🛠️ Postman Collection
+
+| Tool | Link |
+|------|------|
+| **Postman Collection** | 📥 [Download Here]([https://your-link.com/postman.json](https://app.getpostman.com/join-team?invite_code=0cb902afbb9fb7257db6979f5aebf1bce0ffa1c04079e66939a64e6b3ca3c4d4)) |
+
+
