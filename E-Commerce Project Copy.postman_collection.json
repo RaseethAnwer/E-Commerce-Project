@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "6eb2810e-cf2b-4821-b3a2-6f08f58660af",
+		"name": "E-Commerce Project Copy",
+		"description": "**User Signup** (`POST /auth/signup`) – Allows users to register as Buyer, Vendor, Staff, Admins ,Super Admin\n\n**User Login** (`POST /auth/login`) – Authenticates users and returns a JWT token for secure access.\n\n**Save/Update Product** (`POST /api/v1/product/saveOrUpdate`) – Vendors or Admins can add new products or update existing ones.\n\n**Get All Products** (`GET /api/v1/product/all`) – Fetches a list of all available products in the store.\n\n**Apply Discount** (`PUT /api/v1/product/{id}/discount`) – Updates the price of a product by applying a discount.\n\n**Search Products** (`GET /api/v1/product/products?name=&category=`) – Retrieves products filtered by name and category.\n\n**Get Product by ID** (`GET /api/v1/product/{id}`) – Fetches detailed information about a specific product.  \n**Delete Product by ID** (`DELETE/api/v1/product/{id}`) – Delete detailed information about a specific product.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "41955790",
+		"_collection_link": "https://bakend-7437.postman.co/workspace/Team-Workspace~15e5d60c-2f3e-4a43-8561-0c991b0f1c8f/collection/41955790-6eb2810e-cf2b-4821-b3a2-6f08f58660af?action=share&source=collection_link&creator=41955790"
+	},
+	"item": [
+		{
+			"name": "Auth - Singup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"musthafa\",\r\n    \"email\": \"musthafa@gmail.com\",\r\n    \"password\": \"Password@123\",\r\n    \"role\": \"STAFF\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8090/auth/signup",
+				"description": "Initially we need to signup for create our user accounts"
+			},
+			"response": []
+		},
+		{
+			"name": "Auth - Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"raja@gmail.com\",\r\n    \"password\": \"Password@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8090/auth/login",
+				"description": "After successfully create our user account we should Login the with email id and password"
+			},
+			"response": []
+		},
+		{
+			"name": "Product - saveOrUpdate",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbndlckBnbWFpbC5jb20iLCJpYXQiOjE3MzkwODkzMjYsImV4cCI6MTczOTEyNTMyNn0.lEj5Ec76YXafjt840_3jcH13pV3o-1OR0nrTcVgNdkk"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"LEGO Star Wars Millennium Falcon\",\r\n  \"description\": \"A highly detailed LEGO set of the iconic Star Wars spacecraft.\",\r\n  \"category\": \"Toys & Games\",\r\n  \"scheduledStartDate\": \"2025-03-15T00:00:00\",\r\n  \"freeDelivery\": true,\r\n  \"deliveryAmount\": 0.00,\r\n  \"oldPrice\": 25000,\r\n  \"newPrice\": 23999,\r\n  \"imageUrl\": \"https://example.com/lego-millenniumfalcon.jpg\",\r\n  \"vendorId\": 21\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8090/api/v1/product/saveOrUpdate",
+				"description": "The admin and Vendor can only add and update the Products"
+			},
+			"response": []
+		},
+		{
+			"name": "Product - viewAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtdXN0aGFmYUBnbWFpbC5jb20iLCJpYXQiOjE3MzkwODk3MTIsImV4cCI6MTczOTEyNTcxMn0.cSZAEMHWH3424RJ9i1HrCONM3dM7iHt2bWntKfu9LvE"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8090/api/v1/product/all"
+			},
+			"response": []
+		},
+		{
+			"name": "Product - discount",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtdXN0aGFmYUBnbWFpbC5jb20iLCJpYXQiOjE3MzkwODk3MTIsImV4cCI6MTczOTEyNTcxMn0.cSZAEMHWH3424RJ9i1HrCONM3dM7iHt2bWntKfu9LvE"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8090/api/v1/product/10/discount",
+				"description": "Any one can get the discount about the particular product they want see"
+			},
+			"response": []
+		},
+		{
+			"name": "Product - Search and Pagination",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtdXN0aGFmYUBnbWFpbC5jb20iLCJpYXQiOjE3MzkwODk3MTIsImV4cCI6MTczOTEyNTcxMn0.cSZAEMHWH3424RJ9i1HrCONM3dM7iHt2bWntKfu9LvE"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/v1/product/products?name=OnePlus Nord 3&category=Electronics",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"v1",
+						"product",
+						"products"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "OnePlus Nord 3"
+						},
+						{
+							"key": "category",
+							"value": "Electronics"
+						}
+					]
+				},
+				"description": "Anyone can search the product and pagination for the products as we shown"
+			},
+			"response": []
+		},
+		{
+			"name": "Product - particular product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYWphQGdtYWlsLmNvbSIsImlhdCI6MTczOTA5MDU4NywiZXhwIjoxNzM5MTI2NTg3fQ._DaMbDiITxbgBb8QGaR3H6e06pZt0Y5_Q2dW0UoW1Ww"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8090/api/v1/product/14",
+				"description": "Anyone can view the particular product"
+			},
+			"response": []
+		},
+		{
+			"name": "Product - Delete product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYWphQGdtYWlsLmNvbSIsImlhdCI6MTczOTA5MDU4NywiZXhwIjoxNzM5MTI2NTg3fQ._DaMbDiITxbgBb8QGaR3H6e06pZt0Y5_Q2dW0UoW1Ww"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8090/api/v1/product/13",
+				"description": "Only Admin can able to delete the product"
+			},
+			"response": []
+		}
+	]
+}
